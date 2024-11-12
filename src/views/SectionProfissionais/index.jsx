@@ -1,9 +1,10 @@
 import { Col, Row } from "antd";
 import back1 from "../../assets/back1.svg";
-import CardProfissionais from "../../components/CardProfissionais";
+
 import medico1 from "../../assets/doctorWoman.png";
 import medico2 from "../../assets/menDoctor.png";
 import medico3 from "../../assets/doctorWoman2.png";
+import CardProfissionais from "../../components/CardProfissionais";
 
 const SectionProfissionais = () => {
   return (

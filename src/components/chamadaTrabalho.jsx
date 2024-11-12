@@ -1,5 +1,4 @@
 import { FaUserDoctor } from "react-icons/fa6";
-import { GoCodeOfConduct, GoWorkflow } from "react-icons/go";
 
 const ChamadaTrabalho = () => {
   return (
