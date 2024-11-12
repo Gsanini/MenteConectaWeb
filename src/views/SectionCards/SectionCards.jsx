@@ -13,7 +13,7 @@ const SectionCardsAndSobre = () => {
     <section
       className="w-full min-h-[130vh] bg-cover pb-[90px] px-5 md:px-10 lg:px-[4rem] xl:px-[8rem] 2xl:px-[15rem] z-[3]"
       style={{
-        backgroundImage: `url(${circleBack})`,
+        backgroundImage: `url(${new URL(circleBack, import.meta.url)})`,
       }}
     >
       <div className="z-[3]">

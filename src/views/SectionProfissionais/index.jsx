@@ -11,7 +11,7 @@ const SectionProfissionais = () => {
     <section
       className="w-full min-h-[70vh] bg-cover pt-[5rem] pb-[5rem] md:pt-[8rem] md:pb-[10rem] lg:pt-[8rem] lg:pb-[10rem] z-[3] font-poppins px-5 md:px-10 lg:px-[4rem] xl:px-[8rem] 2xl:px-[15rem] block justify-center "
       style={{
-        backgroundImage: `url(${back1})`,
+        backgroundImage: `url(${new URL(back1, import.meta.url)})`,
       }}
     >
       <div className="flex">
