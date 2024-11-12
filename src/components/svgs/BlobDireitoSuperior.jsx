@@ -2,7 +2,7 @@ import imgLogo from "../../assets/blob.svg";
 
 const Blob = () => {
   return (
-    <div className="absolute -top-0 w-full z-[1]">
+    <div className="absolute -top-0 w-full z-[0]">
       <img
         src={imgLogo}
         alt="logoConecta"

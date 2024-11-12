@@ -1,14 +1,15 @@
 import { Typewriter } from "react-simple-typewriter";
-import SVGAnimation from "../../components/svgs/SvgAnimation";
-import SvgAnimationHome from "../../components/svgs/SvgCalendarHome";
+import arrow from "../../assets/arrow.png";
+import { LuCalendarSearch } from "react-icons/lu";
+import foto from "../../assets/sorrindo.png";
 
 const SectionHomeView = () => {
   return (
-    <section className="bg-offWhite min-h-[calc(100vh_-_200px)] flex justify-between py-12 px-5 md:px-10 lg:px-[4rem] xl:px-[8rem] 2xl:px-[15rem]">
+    <section className="bg-offWhite min-h-[calc(100vh_-_30px)] flex justify-between items-center py-[130px] px-5 md:px-10 lg:px-[4rem] xl:px-[8rem] 2xl:px-[15rem] space-x-10">
       <div className="flex flex-col justify-center items-center w-full text-start lg:items-start z-[2]">
-        <h1 className="text-azulMarinho text-[25px] font-poppins text-start font-extralight md:text-[30px] lg:text-[35px] xl:text-[40px]">
+        <h1 className="text-marrom text-[25px] font-poppins text-start font-extralight md:text-[30px] lg:text-[30px] xl:text-[35px] 2xl:text-[40px]">
           Levando{" "}
-          <span className="font-bold">
+          <span className="font-bold ">
             <Typewriter
               words={["saúde", "equilíbrio", "bem-estar"]}
               loop={false}
@@ -22,28 +23,33 @@ const SectionHomeView = () => {
           <br />
           mental para todos.
         </h1>
-        <p className="text-gray-400 text-[12px] font-poppins mt-5 text-center lg:text-[14px] md:text-start">
+        <p className="text-gray-400 text-[12px] font-poppins mt-5 text-center lg:text-[12px] 2xl:text-[14px] md:text-start ">
           A <span className="text-laranja font-medium">Mente Conecta</span> é
           uma plataforma{" "}
           <span className="md:hidden">
             <br />
           </span>
-          que oferece acesso direto aos melhores{" "}
-          <span className="hidden md:flex mt-[-20px]">
-            <br />
-          </span>
-          profissionais especializados em
+          que oferece acesso direto aos melhores profissionais especializados em
           <span className="text-laranja font-medium"> saúde mental</span>.
         </p>
-        <button className="border border-laranja text-laranja px-6 rounded-[20px] h-12 font-poppins text-[13px] flex items-center shadow transition-shadow duration-500 hover:shadow-xl hover:bg-laranja hover:text-white mt-6 lg:text-[16px]">
-          Agende agora
-          <span className="ml-3">
-            <SVGAnimation />
-          </span>
-        </button>
+        <div className="mt-5 flex items-center">
+          <img src={arrow} alt="arrow" />
+          <div className="ml-5 mt-9">
+            <button className="border tracking-wide border-laranja text-laranja px-6 lg:px-10 rounded-[20px] h-12 font-poppins text-[13px] flex items-center shadow transition-shadow duration-500 hover:shadow-xl hover:bg-laranja hover:text-white lg:text-[16px]">
+              Agende agora
+              <span className="ml-3">
+                <LuCalendarSearch size={22} />
+              </span>
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="hidden lg:flex flex-col justify-center items-center w-full lg:items-end z-[2]">
-        <SvgAnimationHome />
+      <div className="hidden lg:flex flex-col h-[480px] justify-center items-center w-full lg:items-end z-[2] bg-gradient-to-tr from-orange-500 via-red-500 to-orange-600 rounded-[30px] overflow-hidden shadow-2xl">
+        <img
+          src={foto}
+          alt="Imagem"
+          className="w-full h-full object-cover drop-shadow-2xl"
+        />
       </div>
     </section>
   );

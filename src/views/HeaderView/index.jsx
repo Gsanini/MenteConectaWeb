@@ -1,20 +1,38 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "../../components/Logo";
 import { FiLogIn, FiMenu, FiX } from "react-icons/fi";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [menuClicado, setMenuClicado] = useState("Home");
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const handleMenuToggle = () => {
     setMenuOpen(!menuOpen);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Defina a opacidade e a posição do menu conforme a rolagem
+      setIsScrolled(window.scrollY > 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
-    <header className="bg-offWhite flex justify-between items-center py-3 px-5 md:px-10 lg:px-[4rem] xl:px-[8rem] 2xl:px-[15rem]">
+    <header
+      className={`fixed top-0 left-0 w-full z-10 transition-all duration-300 ${
+        isScrolled ? "bg-offWhite bg-opacity-100 shadow-lg" : "bg-transparent"
+      } flex justify-between items-center py-3 px-5 md:px-10 lg:px-[4rem] xl:px-[8rem] 2xl:px-[15rem]`}
+    >
       <Logo />
       {/* Menu de navegação em telas grandes */}
-      <nav className="hidden lg:flex items-center text-white z-[2]">
-        <ul className="flex w-full text-azulMarinho font-poppins space-x-2 md:space-x-4 lg:space-x-8 md:text-[13px]">
+      <nav className="hidden lg:flex items-center z-[2]">
+        <ul className="flex w-full text-marrom font-poppins space-x-2 md:space-x-4 lg:space-x-8 md:text-[13px] xl:text-[11px] 2xl:text-[13px]">
           {["Home", "Sobre", "Profissionais", "Agendar Consulta"].map(
             (item) => (
               <li
@@ -26,7 +44,7 @@ const Header = () => {
                   href={`#${item.toLowerCase()}`}
                   className={
                     menuClicado === item
-                      ? "border-b-2 border-solid border-azulMarinho "
+                      ? "border-b-2 border-solid border-marrom"
                       : ""
                   }
                 >
@@ -37,7 +55,7 @@ const Header = () => {
           )}
         </ul>
         <div className="ml-3 lg:ml-7 ">
-          <button className="bg-azulMarinho text-white px-6 py-2 rounded-[10px] h-13 font-poppins text-[13px] flex items-center shadow transition-shadow duration-900 hover:shadow-xl">
+          <button className="bg-marrom text-white px-6 py-2 rounded-[10px] h-13 font-poppins text-[11px] 2xl:text-[13px] flex items-center hover:shadow-xl shadow transition-shadow duration-500">
             LOGIN
             <span className="ml-3">
               <FiLogIn size={18} />
@@ -49,7 +67,7 @@ const Header = () => {
       {/* Ícone de hambúrguer para telas pequenas */}
       <div className="lg:hidden mt-2 z-[2]">
         <button onClick={handleMenuToggle}>
-          <FiMenu size={20} className="text-offWhite" />
+          <FiMenu size={20} className="text-marrom" />
         </button>
       </div>
 
@@ -61,12 +79,12 @@ const Header = () => {
         <div className="flex flex-col items-end mt-5 mr-5">
           <FiX
             size={20}
-            className="text-azulMarinho"
+            className="text-marrom"
             cursor="pointer"
             onClick={handleMenuToggle}
           />
         </div>
-        <ul className="flex flex-col items-start ml-5 text-azulMarinho font-poppins space-y-4  text-[11px] mt-[3rem]">
+        <ul className="flex flex-col items-start ml-5 text-marrom font-poppins space-y-4  text-[11px] mt-[3rem]">
           {["Home", "Sobre", "Profissionais", "Agendar Consulta"].map(
             (item) => (
               <li
@@ -81,7 +99,7 @@ const Header = () => {
                   href={`#${item.toLowerCase()}`}
                   className={
                     menuClicado === item
-                      ? "border-b-2 border-solid border-azulMarinho"
+                      ? "border-b-2 border-solid border-marrom"
                       : ""
                   }
                 >
@@ -91,7 +109,7 @@ const Header = () => {
             )
           )}
           <li>
-            <button className="bg-azulMarinho text-white px-6 py-2 rounded-[10px] font-poppins text-[11px] flex items-center shadow transition-shadow duration-900 hover:shadow-xl">
+            <button className="bg-marrom text-white px-6 py-2 rounded-[10px] font-poppins text-[11px] flex items-center shadow transition-shadow duration-900 hover:shadow-xl">
               LOGIN
               <span className="ml-3">
                 <FiLogIn size={15} />

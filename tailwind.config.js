@@ -8,12 +8,10 @@ export default {
         azulMarinho: "#004A93",
         laranja: "#FF5E41",
         azul: "#0080FF",
+        marrom: "#333333",
       },
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
-      },
-      backgroundImage: {
-        "home-bg": "url('assets/waveBack.svg')",
       },
     },
   },
