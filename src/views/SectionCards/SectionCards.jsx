@@ -3,19 +3,13 @@ import { FaCalendarCheck, FaHandHoldingHand } from "react-icons/fa6";
 import CardService from "../../components/CardService";
 import { FaHandsHelping } from "react-icons/fa";
 import { PiChartLineUpBold } from "react-icons/pi";
-import circleBack from "../../assets/circleBack.svg";
 import { BsPersonCheckFill } from "react-icons/bs";
 import brain from "../../assets/brain.png";
 import medicoPng from "../../assets/medico.png";
 
 const SectionCardsAndSobre = () => {
   return (
-    <section
-      className="w-full min-h-[130vh] bg-cover pb-[90px] px-5 md:px-10 lg:px-[4rem] xl:px-[8rem] 2xl:px-[15rem] z-[3]"
-      style={{
-        backgroundImage: `url(${new URL(circleBack, import.meta.url)})`,
-      }}
-    >
+    <section className="w-full min-h-[130vh] bg-image1 bg-cover pb-[90px] px-5 md:px-10 lg:px-[4rem] xl:px-[8rem] 2xl:px-[15rem] z-[3]">
       <div className="z-[3]">
         <Row gutter={[30, 55]} className="z-[3] min-h-[200px]">
           <Col xs={24} sm={12} md={12} lg={8}>

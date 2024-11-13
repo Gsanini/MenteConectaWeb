@@ -13,6 +13,10 @@ export default {
       fontFamily: {
         poppins: ["Poppins", "sans-serif"],
       },
+      backgroundImage: {
+        image1: "url('/assets/circleBack.svg')",
+        image2: "url('/assets/circleBack2.svg')",
+      },
     },
   },
   plugins: [],

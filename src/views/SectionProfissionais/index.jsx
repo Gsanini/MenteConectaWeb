@@ -1,5 +1,4 @@
 import { Col, Row } from "antd";
-import back1 from "../../assets/back1.svg";
 
 import medico1 from "../../assets/doctorWoman.png";
 import medico2 from "../../assets/menDoctor.png";
@@ -8,12 +7,7 @@ import CardProfissionais from "../../components/CardProfissionais";
 
 const SectionProfissionais = () => {
   return (
-    <section
-      className="w-full min-h-[70vh] bg-cover pt-[5rem] pb-[5rem] md:pt-[8rem] md:pb-[10rem] lg:pt-[8rem] lg:pb-[10rem] z-[3] font-poppins px-5 md:px-10 lg:px-[4rem] xl:px-[8rem] 2xl:px-[15rem] block justify-center "
-      style={{
-        backgroundImage: `url(${new URL(back1, import.meta.url)})`,
-      }}
-    >
+    <section className="w-full min-h-[70vh] bg-image2 bg-cover pt-[5rem] pb-[5rem] md:pt-[8rem] md:pb-[10rem] lg:pt-[8rem] lg:pb-[10rem] z-[3] font-poppins px-5 md:px-10 lg:px-[4rem] xl:px-[8rem] 2xl:px-[15rem] block justify-center ">
       <div className="flex">
         <div className="w-[5px] h-[50px] bg-marrom rounded-full" />
         <h2 className="text-[30px] md:text-[35px] font-thin text-start text-marrom ml-3">
