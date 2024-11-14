@@ -38,7 +38,7 @@ const CardProfissionais = ({ nome, sobrenome, descricao, img }) => {
             <span className="ml-[5px]">{sobrenome}</span>
           </h3>
           <div
-            className={`w-[30px] h-[30px] bg-gradient-to-tr from-orange-500 via-red-500 to-orange-600 text-offWhite rounded-[20px] flex items-center justify-center ml-[10px] shadow-lg transform-gpu transition-transform duration-500 ${
+            className={`w-[30px] h-[30px] bg-gradient-to-tr from-orange-500 via-red-500 to-orange-600 text-offWhite rounded-[20px] flex items-center justify-center ml-[10px] shadow-lg transform-gpu transition-transform duration-1000 ${
               hover ? "rotate-180" : "rotate-0"
             }`}
           >

@@ -33,7 +33,6 @@ const SectionProfissionais = () => {
           trigger: cards[0],
           start: startOffset,
           end: endOffset,
-          toggleActions: "play none none reverse",
         },
       }
     );
@@ -49,7 +48,6 @@ const SectionProfissionais = () => {
           trigger: cards[1],
           start: startOffset,
           end: endOffset,
-          toggleActions: "play none none reverse",
         },
       }
     );
@@ -65,7 +63,6 @@ const SectionProfissionais = () => {
           trigger: cards[2],
           start: startOffset,
           end: endOffset,
-          toggleActions: "play none none reverse",
         },
       }
     );

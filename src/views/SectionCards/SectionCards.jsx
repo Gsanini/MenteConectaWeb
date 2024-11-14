@@ -36,9 +36,9 @@ const SectionCardsAndSobre = () => {
         ease: "power4.out",
         scrollTrigger: {
           trigger: card,
-          start: isMobile ? "top 85%" : "top 90%",
-          end: isMobile ? "top 45%" : "top 50%",
-          toggleActions: "play none none reverse",
+          start: isMobile ? "top 75%" : "top 65%",
+          end: isMobile ? "top 30%" : "top 10%",
+          markers: false,
         },
       });
     });

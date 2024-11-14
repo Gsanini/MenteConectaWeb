@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Logo from "../../components/Logo";
+import brain from "../../assets/brainMarrom.png";
 import { FiLogIn, FiMenu, FiX } from "react-icons/fi";
 
 const Header = () => {
@@ -117,6 +118,9 @@ const Header = () => {
             </button>
           </li>
         </ul>
+        <div className="absolute bottom-4 right-4">
+          <img src={brain} alt="brain" className="w-[50px]" />
+        </div>
       </nav>
     </header>
   );
