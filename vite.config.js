@@ -26,7 +26,7 @@ export default defineConfig({
         ],
       },
       webp: {
-        quality: 100, // Ajuste a qualidade para o formato WebP (0 a 100)
+        quality: 70, // Ajuste a qualidade para o formato WebP (0 a 100)
       },
     }),
   ],
@@ -34,5 +34,4 @@ export default defineConfig({
     port: 3002,
     open: true,
   },
-  assetsInclude: ["**/*.svg"],
 });

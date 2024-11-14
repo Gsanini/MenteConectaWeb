@@ -16,7 +16,7 @@ const ChamadaTrabalho = () => {
           </p>
         </div>
         <div className="flex items-center justify-center lg:ml-12 mt-3 md:mt-0">
-          <button className="z-[4] border-2 text-white px-6 md:px-8 py-2 rounded-[50px] h-12 md:h-16 font-poppins text-[13px] 2xl:text-[17px] flex items-center hover:shadow-xl shadow-2xl transition-shadow duration-500 hover:border-offWhite hover:bg-offWhite hover:text-gray-600">
+          <button className="z-[4] border-2 text-white px-6 md:px-8 py-2 rounded-[50px] h-12 md:h-16 font-poppins text-[13px] 2xl:text-[17px] flex items-center hover:shadow-xl shadow-2xl transition-all duration-300 hover:border-offWhite hover:bg-offWhite hover:text-gray-600">
             Trabalhe com a gente!
             <span className="ml-3">
               <FaUserDoctor size={23} />

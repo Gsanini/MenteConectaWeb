@@ -32,7 +32,7 @@ const Header = () => {
       <Logo />
       {/* Menu de navegação em telas grandes */}
       <nav className="hidden lg:flex items-center z-[2]">
-        <ul className="flex w-full text-marrom font-poppins space-x-2 md:space-x-4 lg:space-x-8 md:text-[13px] xl:text-[11px] 2xl:text-[13px]">
+        <ul className="flex w-full text-marrom font-poppins space-x-2 md:space-x-4 lg:space-x-8 md:text-[13px] xl:text-[13px] 2xl:text-[13.5px]">
           {["Home", "Sobre", "Profissionais", "Agendar Consulta"].map(
             (item) => (
               <li
@@ -55,7 +55,7 @@ const Header = () => {
           )}
         </ul>
         <div className="ml-3 lg:ml-7 ">
-          <button className="bg-marrom text-white px-6 py-2 rounded-[10px] h-13 font-poppins text-[11px] 2xl:text-[13px] flex items-center hover:shadow-xl shadow transition-shadow duration-500">
+          <button className="bg-marrom text-white px-6 py-2 rounded-[10px] h-13 font-poppins md:text-[13px] xl:text-[13px] 2xl:text-[13.5px] flex items-center hover:shadow-xl shadow transition-shadow duration-500">
             LOGIN
             <span className="ml-3">
               <FiLogIn size={18} />
@@ -84,7 +84,7 @@ const Header = () => {
             onClick={handleMenuToggle}
           />
         </div>
-        <ul className="flex flex-col items-start ml-5 text-marrom font-poppins space-y-4  text-[11px] mt-[3rem]">
+        <ul className="flex flex-col items-start ml-5 text-marrom font-poppins space-y-4  text-[13px] mt-[3rem]">
           {["Home", "Sobre", "Profissionais", "Agendar Consulta"].map(
             (item) => (
               <li
@@ -109,7 +109,7 @@ const Header = () => {
             )
           )}
           <li>
-            <button className="bg-marrom text-white px-6 py-2 rounded-[10px] font-poppins text-[11px] flex items-center shadow transition-shadow duration-900 hover:shadow-xl">
+            <button className="bg-marrom text-white px-6 py-[6px] rounded-[7px] font-poppins text-[13px] flex items-center shadow transition-shadow duration-900 hover:shadow-xl">
               LOGIN
               <span className="ml-3">
                 <FiLogIn size={15} />

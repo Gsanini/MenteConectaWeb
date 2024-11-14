@@ -7,61 +7,103 @@ import { BsPersonCheckFill } from "react-icons/bs";
 import brain from "../../assets/brain.png";
 import medicoPng from "../../assets/medico.png";
 
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import { useEffect, useRef } from "react";
+
+gsap.registerPlugin(ScrollTrigger);
+
 const SectionCardsAndSobre = () => {
+  const cardsRef = useRef([]);
+
+  useEffect(() => {
+    const isMobile = window.innerWidth < 768;
+
+    cardsRef.current.forEach((card) => {
+      const animationSettings = {
+        opacity: 0,
+        y: isMobile ? 30 : 50,
+        rotation: isMobile ? 5 : 10,
+        scale: 0.9,
+      };
+
+      gsap.fromTo(card, animationSettings, {
+        opacity: 1,
+        y: 0,
+        rotation: 0,
+        scale: 1,
+        duration: 1.5,
+        ease: "power4.out",
+        scrollTrigger: {
+          trigger: card,
+          start: isMobile ? "top 85%" : "top 90%",
+          end: isMobile ? "top 45%" : "top 50%",
+          toggleActions: "play none none reverse",
+        },
+      });
+    });
+  }, []);
+
   return (
     <section className="w-full min-h-[130vh] bg-image1 bg-cover pb-[90px] px-5 md:px-10 lg:px-[4rem] xl:px-[8rem] 2xl:px-[15rem] z-[3]">
       <div className="z-[3]">
         <Row gutter={[30, 55]} className="z-[3] min-h-[200px]">
           <Col xs={24} sm={12} md={12} lg={8}>
-            <CardService
-              icon={
-                <PiChartLineUpBold
-                  color="#fffaf1"
-                  className="text-[27px] lg:text-[35px]"
-                />
-              }
-              title="Inovação"
-              content="Com tecnologias e abordagens modernas, buscamos aprimorar os tratamentos para promover resultados eficientes e acessíveis."
-            />
+            <div ref={(el) => (cardsRef.current[0] = el)}>
+              <CardService
+                icon={
+                  <PiChartLineUpBold
+                    color="#fffaf1"
+                    className="text-[27px] lg:text-[35px]"
+                  />
+                }
+                title="Inovação"
+                content="Com tecnologias e abordagens modernas, buscamos aprimorar os tratamentos para promover resultados eficientes e acessíveis."
+              />
+            </div>
           </Col>
           <Col xs={24} sm={12} md={12} lg={8}>
-            {" "}
-            <CardService
-              icon={
-                <FaHandsHelping
-                  color="#fffaf1"
-                  className="text-[27px] lg:text-[35px]"
-                />
-              }
-              title="Excelência"
-              content="Nosso trabalho é baseado em altos padrões de qualidade e práticas recomendadas, oferecendo atendimento eficaz e seguro."
-            />
+            <div ref={(el) => (cardsRef.current[1] = el)}>
+              {" "}
+              <CardService
+                icon={
+                  <FaHandsHelping
+                    color="#fffaf1"
+                    className="text-[27px] lg:text-[35px]"
+                  />
+                }
+                title="Excelência"
+                content="Nosso trabalho é baseado em altos padrões de qualidade e práticas recomendadas, oferecendo atendimento eficaz e seguro."
+              />
+            </div>
           </Col>
           <Col xs={24} sm={12} md={12} lg={8}>
-            {" "}
-            <CardService
-              icon={
-                <FaCalendarCheck
-                  color="#fffaf1"
-                  className="text-[27px] lg:text-[35px]"
-                />
-              }
-              title="Flexibilidade"
-              content="Adaptamos nossos métodos e horários para atender às suas necessidades, sempre respeitando o seu tempo e individualidade."
-            />
+            <div ref={(el) => (cardsRef.current[2] = el)}>
+              <CardService
+                icon={
+                  <FaCalendarCheck
+                    color="#fffaf1"
+                    className="text-[27px] lg:text-[35px]"
+                  />
+                }
+                title="Flexibilidade"
+                content="Adaptamos nossos métodos e horários para atender às suas necessidades, sempre respeitando o seu tempo e individualidade."
+              />
+            </div>
           </Col>
           <Col xs={24} sm={12} md={12} lg={{ offset: 4, span: 8 }}>
-            {" "}
-            <CardService
-              icon={
-                <FaHandHoldingHand
-                  color="#fffaf1"
-                  className="text-[27px] lg:text-[35px]"
-                />
-              }
-              title="Ética"
-              content="Mantemos a privacidade e o sigilo de dados, garantindo um alto padrão de comprometimento."
-            />
+            <div ref={(el) => (cardsRef.current[3] = el)}>
+              <CardService
+                icon={
+                  <FaHandHoldingHand
+                    color="#fffaf1"
+                    className="text-[27px] lg:text-[35px]"
+                  />
+                }
+                title="Ética"
+                content="Mantemos a privacidade e o sigilo de dados, garantindo um alto padrão de comprometimento."
+              />
+            </div>
           </Col>
           <Col
             xs={24}
@@ -69,17 +111,18 @@ const SectionCardsAndSobre = () => {
             md={{ offset: 6, span: 12 }}
             lg={{ offset: 0, span: 8 }}
           >
-            {" "}
-            <CardService
-              icon={
-                <BsPersonCheckFill
-                  color="#fffaf1"
-                  className="text-[27px] lg:text-[35px]"
-                />
-              }
-              title="Humanização"
-              content="Oferecemos tratamentos baseados em evidências, com apoio emocional e respeito à singularidade de cada pessoa."
-            />
+            <div ref={(el) => (cardsRef.current[4] = el)}>
+              <CardService
+                icon={
+                  <BsPersonCheckFill
+                    color="#fffaf1"
+                    className="text-[27px] lg:text-[35px]"
+                  />
+                }
+                title="Humanização"
+                content="Oferecemos tratamentos baseados em evidências, com apoio emocional e respeito à singularidade de cada pessoa."
+              />
+            </div>
           </Col>
         </Row>
       </div>

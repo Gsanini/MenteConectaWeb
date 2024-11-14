@@ -5,7 +5,7 @@ import foto from "../../assets/sorrindo.png";
 
 const SectionHomeView = () => {
   return (
-    <section className="bg-offWhite min-h-[calc(100vh_-_30px)] flex justify-between items-center py-[130px] px-5 md:px-10 lg:px-[4rem] xl:px-[8rem] 2xl:px-[15rem] space-x-10">
+    <section className=" bg-image3 bg-cover min-h-[105vh] flex flex-col lg:flex-row justify-between items-center pb-[140px] pt-[180px] lg:py-[130px] px-5 md:px-10 lg:px-[4rem] xl:px-[8rem] 2xl:px-[15rem] lg:space-x-10">
       <div className="flex flex-col justify-center items-center w-full text-start lg:items-start z-[2]">
         <h1 className="text-marrom text-[25px] font-poppins text-start font-extralight md:text-[30px] lg:text-[30px] xl:text-[35px] 2xl:text-[40px]">
           Levando{" "}
@@ -35,7 +35,7 @@ const SectionHomeView = () => {
         <div className="mt-5 flex items-center">
           <img src={arrow} alt="arrow" />
           <div className="ml-5 mt-9">
-            <button className="border tracking-wide border-laranja text-laranja px-6 lg:px-10 rounded-[20px] h-12 font-poppins text-[13px] flex items-center shadow transition-shadow duration-500 hover:shadow-xl hover:bg-laranja hover:text-white lg:text-[16px]">
+            <button className="border tracking-wide border-laranja text-laranja  md:w-[150%] px-6 lg:px-10 rounded-[20px] h-12 font-poppins text-[13px] flex items-center justify-center shadow transition-all duration-300 hover:shadow-xl hover:bg-laranja hover:text-white lg:text-[16px]">
               Agende agora
               <span className="ml-3">
                 <LuCalendarSearch size={22} />
@@ -44,7 +44,8 @@ const SectionHomeView = () => {
           </div>
         </div>
       </div>
-      <div className="hidden lg:flex flex-col h-[480px] justify-center items-center w-full lg:items-end z-[2] bg-gradient-to-tr from-orange-500 via-red-500 to-orange-600 rounded-[30px] overflow-hidden shadow-2xl">
+      {/* Imagem agora será visível abaixo da div à esquerda em telas menores */}
+      <div className="lg:flex flex-col h-[300px] md:h-[500px] lg:h-[500px] justify-center items-center w-full lg:items-end z-[2] bg-gradient-to-tr from-orange-500 via-red-500 to-orange-600 rounded-[30px] overflow-hidden shadow-2xl lg:order-2 mt-10 lg:mt-0">
         <img
           src={foto}
           alt="Imagem"

@@ -16,6 +16,7 @@ export default {
       backgroundImage: {
         image1: "url('/assets/circleBack.svg')",
         image2: "url('/assets/circleBack2.svg')",
+        image3: "url('/assets/circleBack3.svg')",
       },
     },
   },
