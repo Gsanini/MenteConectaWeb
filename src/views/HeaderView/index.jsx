@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Logo from "../../components/Logo";
 import brain from "../../assets/brainMarrom.png";
 import { FiLogIn, FiMenu, FiX } from "react-icons/fi";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -56,12 +57,14 @@ const Header = () => {
           )}
         </ul>
         <div className="ml-3 lg:ml-7 ">
-          <button className="bg-marrom text-white px-6 py-2 rounded-[10px] h-13 font-poppins md:text-[13px] xl:text-[13px] 2xl:text-[13.5px] flex items-center hover:shadow-xl shadow transition-shadow duration-500">
-            LOGIN
-            <span className="ml-3">
-              <FiLogIn size={18} />
-            </span>
-          </button>
+          <Link to="/login">
+            <button className="bg-marrom text-white px-6 py-2 rounded-[10px] h-13 font-poppins md:text-[13px] xl:text-[13px] 2xl:text-[13.5px] flex items-center hover:shadow-xl shadow transition-shadow duration-500">
+              LOGIN
+              <span className="ml-3">
+                <FiLogIn size={18} />
+              </span>
+            </button>
+          </Link>
         </div>
       </nav>
 
@@ -110,12 +113,14 @@ const Header = () => {
             )
           )}
           <li>
-            <button className="bg-marrom text-white px-6 py-[6px] rounded-[7px] font-poppins text-[13px] flex items-center shadow transition-shadow duration-900 hover:shadow-xl">
-              LOGIN
-              <span className="ml-3">
-                <FiLogIn size={15} />
-              </span>
-            </button>
+            <Link to="/login">
+              <button className="bg-marrom text-white px-6 py-[6px] rounded-[7px] font-poppins text-[13px] flex items-center shadow transition-shadow duration-900 hover:shadow-xl">
+                LOGIN
+                <span className="ml-3">
+                  <FiLogIn size={15} />
+                </span>
+              </button>
+            </Link>
           </li>
         </ul>
         <div className="absolute bottom-4 right-4">
